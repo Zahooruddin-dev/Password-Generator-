@@ -1,63 +1,40 @@
-
-Password Generator
-
-
-A versatile and user-friendly password generator built with HTML, CSS, and JavaScript. This tool allows users to generate secure passwords, customize the length of the passwords, and copy them to the clipboard with ease. It includes additional features such as password strength indicators and copy notifications to enhance user experience.
+Random Joke Generator
+A dynamic and interactive web app that fetches random jokes and provides features such as joke history, copying jokes to the clipboard, and sharing jokes. The app includes theme toggling for a light or dark mode experience.
 
 Features
-Generate Passwords: Create two random passwords with a length of 15 characters.
-Customize Length: Adjust the length of generated passwords with a user-friendly input field.
-Copy to Clipboard: Easily copy generated passwords to the clipboard with a single click.
-Password Strength Indicator: Display the strength of the generated passwords.
-Copy Notification: Inform users when passwords have been successfully copied.
-Getting Started
-To get started with this project, follow these instructions:
+Generate Random Jokes: Fetch and display a new joke each time the "Get Random Joke" button is clicked.
+Highlight New Jokes: New jokes are highlighted briefly for better visibility.
+Joke History: Keep track of the last 5 jokes with clickable history items for easy copying.
+Copy to Clipboard: Click on a joke or use the dedicated copy button to copy jokes to the clipboard.
+Share Joke: Share the current joke via the Web Share API on supported platforms.
+Toggle Theme: Switch between light and dark modes to suit your preference.
+Loading Indicator: Display a loading message while fetching jokes to inform users that data is being retrieved.
+Live Demo
+Check out the live demo of the project here.
 
-Prerequisites
-Basic knowledge of HTML, CSS, and JavaScript.
-A web browser for testing.
+Screenshots
 
 Installation
-Clone the Repository
+Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-zahooruddin-devs/password-generator.git
-Navigate to the Project Directory
+git clone https://github.com/yourusername/joke-generator.git
+Navigate to the project directory:
 
 bash
 Copy code
-cd password-generator
-Open the Project in a Web Browser
+cd joke-generator
+Open index.html in your web browser to view the application.
 
-Open index.html in your preferred web browser to view and interact with the password generator.
-
-Usage
-Generate Passwords
-
-Click the "Generate Passwords" button to create two random passwords.
-
-Copy Passwords
-
-Click the "Copy to Clipboard" button next to each password to copy them to your clipboard.
-
-Adjust Password Length
-
-Use the input field to set the desired length for the passwords, and then click "Generate Passwords" to apply the changes.
-
-View Password Strength
-
-The strength of the generated passwords will be indicated below the password display area.
-
-File Structure
-index.html: The main HTML file that contains the structure of the password generator.
-styles.css: The CSS file responsible for the styling of the password generator.
-app.js: The JavaScript file that contains the logic for generating passwords, copying to clipboard, and other functionalities.
+Technologies Used
+HTML
+CSS
+JavaScript
+Fetch API for retrieving jokes
+Web Share API for sharing functionality
 Contributing
-Contributions to this project are welcome! Please follow these guidelines:
+Contributions are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them with clear messages.
-Push your changes to your forked repository.
-Submit a pull request with a description of your changes.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
