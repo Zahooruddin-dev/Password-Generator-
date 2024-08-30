@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Document</title>
-	</head>
-	<body>
-    <div class="container">
-		<h1>Generate a <br>
-	Random Passowrd</h1>
-		<p>Never use an insecure password again.</p>
-    <button onclick="logic()">Generate passwords</button>
-    <hr>
-    <div class="passes1" id="pass1"></div>
-    <div class="passes2"id="pass2"></div>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="password-generator">
+    <div class="password-container">
+      <div class="password" id="pass1"></div>
+      <button id="copyBtn1" class="copy-btn">Copy Password 1</button>
+      <div class="password" id="pass2"></div>
+      <button id="copyBtn2" class="copy-btn">Copy Password 2</button>
+    </div>
+    <button id="generateBtn" class="btn">Generate Passwords</button>
+    <label for="passwordLength">Password Length:</label>
+    <input type="number" id="passwordLength" value="15" min="8" max="32">
+    <div id="strengthIndicator"></div>
+    <div id="copyNotification"></div>
   </div>
-		<script src="app.js"></script>
-	</body>
+  <script src="app.js"></script>
+</body>
 </html>

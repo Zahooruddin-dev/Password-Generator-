@@ -1,131 +1,79 @@
+/* Global Styles */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 
 body {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: #c2c2c2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #0f172a;
   margin: 0;
-background: #1C1C1C;
-
-
-}
-h1{
-/* Heading */
-
-position: absolute;
-width: 354px;
-height: 80px;
-left: 52px;
-top: 45px;
-
-font-family: 'Karla';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 40px;
-/* or 100% */
-letter-spacing: -0.025em;
-
-/* white */
-color: #FFFFFF;
-
-
+  padding: 0;
 }
 
-p{
-/* Supporting text */
-
-position: absolute;
-width: 372px;
-height: 28px;
-left: 52px;
-top: 145px;
-
-/* text-xl/leading-7/font-normal */
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-/* identical to box height, or 140% */
-
-/* Medium grey */
-color: #D5D4D8;
-
-
+/* Password Generator Container */
+.password-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem auto;
+  width: 90vw;
+  max-width: 600px;
 }
-.container {
-  position: absolute;
-  width: 535px;
-  height: 535px;
-  background: #1F2937;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 15px;
-  
-}button{
-/* Button */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 9px 17px 9px 15px;
-gap: 12px;
-
-position: absolute;
-width: 191px;
-height: 42px;
-left: 52px;
-top: 225px;
-
-background: #10B981;
-/* shadow/sm */
-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-border-radius: 6px;
-
+/* Password Container */
+.password-container {
+  margin-bottom: 1rem;
 }
-hr{
-/* Line 17 */
 
-position: absolute;
-width: 446px;
-height: 0px;
-left: 52px;
-top: 321px;
-
-border: 1px solid #2F3E53;
-  
+/* Password Styling */
+.password {
+  background: #e2e8f0;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #334155;
+  width: 100%;
+  word-wrap: break-word;
 }
-.passes1{
 
-position: absolute;
-width: 211px;
-height: 39px;
-left: 52px;
-top: 376px;
-color: #10B981;
-background: #273549;
-border-radius: 6px;
-text-align: center;
-align-content: center;
-
+/* Buttons Styling */
+.copy-btn, .btn {
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  background: #334155;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
 }
-.passes2{
-  /* Rectangle 96 */
 
-position: absolute;
-width: 211px;
-height: 39px;
-left: 287px;
-top: 376px;
-color: #10B981;
-text-align: center;
-background: #273549;
-border-radius: 6px;
-align-content: center;
+.copy-btn:hover, .btn:hover {
+  background: #64748b;
+}
+
+/* Password Length Input */
+#passwordLength {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Strength Indicator */
+#strengthIndicator {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Copy Notification */
+#copyNotification {
+  margin-top: 1rem;
+  color: green;
 }
