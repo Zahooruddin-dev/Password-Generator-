@@ -13,6 +13,10 @@ body {
   color: #0f172a;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Password Generator Container */
@@ -20,60 +24,100 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem auto;
+  margin: 2rem;
+  padding: 2rem;
   width: 90vw;
   max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 /* Password Container */
 .password-container {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 /* Password Styling */
 .password {
   background: #e2e8f0;
-  padding: 1rem;
-  border-radius: 0.25rem;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #334155;
   width: 100%;
   word-wrap: break-word;
+  transition: background 0.3s ease;
+}
+
+.password:hover {
+  background: #cbd5e1;
 }
 
 /* Buttons Styling */
 .copy-btn, .btn {
-  margin: 0.5rem auto;
-  padding: 0.5rem 1rem;
+  margin: 0.75rem auto;
+  padding: 0.75rem 1.5rem;
   background: #334155;
   color: white;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  font-size: 0.85rem;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .copy-btn:hover, .btn:hover {
   background: #64748b;
+  transform: scale(1.05);
 }
 
 /* Password Length Input */
 #passwordLength {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1rem;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  width: 100%;
 }
 
 /* Strength Indicator */
 #strengthIndicator {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-weight: bold;
+  text-align: center;
+  color: #0f172a;
 }
 
 /* Copy Notification */
 #copyNotification {
   margin-top: 1rem;
   color: green;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .password-generator {
+    width: 100vw;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .copy-btn, .btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  #passwordLength {
+    font-size: 1rem;
+  }
+
+  .password {
+    font-size: 1.25rem;
+  }
 }

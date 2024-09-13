@@ -19,7 +19,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/joke-generator.git
+git clone https://github.com/zahooruddin-dev/joke-generator.git
 Navigate to the project directory:
 
 bash
@@ -35,6 +35,3 @@ Fetch API for retrieving jokes
 Web Share API for sharing functionality
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
