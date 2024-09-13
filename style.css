@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #c2c2c2;
+  background: #e0e0e0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   line-height: 1.75;
@@ -30,8 +30,13 @@ body {
   max-width: 600px;
   background-color: #ffffff;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+}
+
+.password-generator:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 /* Password Container */
@@ -42,37 +47,41 @@ body {
 
 /* Password Styling */
 .password {
-  background: #e2e8f0;
-  padding: 1.25rem;
+  background: #f7f9fc;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
-  color: #334155;
+  color: #1f2937;
   width: 100%;
   word-wrap: break-word;
-  transition: background 0.3s ease;
+  border: 1px solid #d1d5db;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .password:hover {
-  background: #cbd5e1;
+  background: #e2e8f0;
+  border-color: #cbd5e1;
 }
 
 /* Buttons Styling */
 .copy-btn, .btn {
   margin: 0.75rem auto;
   padding: 0.75rem 1.5rem;
-  background: #334155;
+  background: #4b5563;
   color: white;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .copy-btn:hover, .btn:hover {
-  background: #64748b;
+  background: #374151;
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Password Length Input */
@@ -81,8 +90,14 @@ body {
   padding: 0.75rem;
   font-size: 1.1rem;
   border-radius: 0.5rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d1d5db;
   width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+#passwordLength:focus {
+  border-color: #4b5563;
+  outline: none;
 }
 
 /* Strength Indicator */
@@ -91,6 +106,14 @@ body {
   font-weight: bold;
   text-align: center;
   color: #0f172a;
+  font-size: 1.2rem;
+}
+
+/* Entropy Indicator */
+#entropyIndicator {
+  margin-top: 0.75rem;
+  color: #1f2937;
+  font-size: 1rem;
 }
 
 /* Copy Notification */
@@ -100,10 +123,19 @@ body {
   font-size: 1rem;
 }
 
+/* Password History Container */
+.history-container {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #1f2937;
+  text-align: left;
+  width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .password-generator {
-    width: 100vw;
+    width: 95vw;
     margin: 1rem;
     padding: 1.5rem;
   }
@@ -119,5 +151,28 @@ body {
 
   .password {
     font-size: 1.25rem;
+  }
+
+  #strengthIndicator, #entropyIndicator {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .password-generator {
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .copy-btn, .btn {
+    font-size: 0.85rem;
+  }
+
+  #passwordLength {
+    font-size: 0.9rem;
+  }
+
+  .password {
+    font-size: 1rem;
   }
 }
